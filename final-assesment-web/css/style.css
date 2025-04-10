@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: tahoma;
+}
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  background: #b9e5e8;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+header h3 {
+  max-width: 80%;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+  align-items: center;
+  background: #7ab2d3;
+}
+nav img {
+  max-width: 100px;
+  margin: 0px 30px 0px 30px;
+}
+nav a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0px 30px 0px 0px;
+  color: black;
+}
+
+/* Body */
+main {
+  display: flex;
+  max-width: 100%;
+}
+/* Article */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 10px;
+  flex: 5;
+  flex-flow: column nowrap;
+  background: #dff2eb;
+}
+article h1 {
+  font-size: 2rem;
+}
+article img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+article h2 {
+  align-self: flex-start;
+}
+article h3 {
+  font-weight: normal;
+}
+article p {
+  font-size: 1.2rem;
+}
+article span {
+  font-weight: bold;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.slider button {
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  align-self: center;
+  border: 0px;
+  background: #b3d8ec;
+}
+.slider button:hover {
+  color: white;
+  background: #4a628a;
+}
+/* Aside */
+aside {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: fit-content;
+  gap: 10px;
+  padding: 50px;
+  border-radius: 10px;
+  background: #c7e8ff;
+  border: 1px solid black;
+}
+aside img {
+  max-width: 300px;
+}
+aside input {
+  height: 30px;
+}
+aside button {
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #4a628a;
+  color: white;
+}
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #adb4b5;
+}
+footer img {
+  max-width: 150px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  main {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+  }
+  nav {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  article {
+    max-width: 100%;
+  }
+  article img {
+    max-width: 90%;
+  }
+  .slider {
+    align-self: flex-start;
+  }
+  aside {
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 0;
+  }
+  footer {
+    border: 1px solid black;
+  }
+}
