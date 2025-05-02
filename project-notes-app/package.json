@@ -1,0 +1,31 @@
+{
+  "name": "project-notes-app",
+  "version": "1.0.0",
+  "description": "Project submission akhir Front-end Dicoding Academy",
+  "main": "index.js",
+  "scripts": {
+  "dev": "webpack-dev-server --config webpack.dev.js",
+  "build": "webpack --config webpack.prod.js", 
+  "start": "webpack serve --config webpack.dev.js" 
+},
+  "author": "Difa Muhamad",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "sweetalert2": "^11.15.10"
+  }
+}

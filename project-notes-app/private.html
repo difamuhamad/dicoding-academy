@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Note</title>
+    <link rel="icon" href="/favicon.png" />
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <nav>
+          <private-navbar></private-navbar>
+        </nav>
+      </header>
+      <div class="sidebar">
+        <custom-sidebar active="private"></custom-sidebar>
+        <private-sort></private-sort>
+      </div>
+      <main>
+        <private-form></private-form>
+        <div class="template-container" id="template-container"></div>
+        <div class="private-note-list" id="private-note-list"></div>
+      </main>
+      <footer>
+        <custom-footer version="2.0.0"></custom-footer>
+      </footer>
+    </div>
+  </body>
+</html>

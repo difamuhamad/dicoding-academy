@@ -1,0 +1,9 @@
+export const template = document.getElementById("template-container");
+export const customLoading = document.querySelector("#loading-container");
+export const archivedNoteList = document.querySelector("#archived-note-list");
+export const noteList = document.getElementById("note-list");
+export const privateNoteList = document.getElementById("private-note-list");
+export const formField = document.getElementById("form-field");
+export const defaultTemplate = document.querySelector("#default-template");
+export const archivedField = document.querySelector("#archived-field");
+export const notes = document.querySelectorAll(".note");
