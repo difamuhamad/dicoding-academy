@@ -34,3 +34,4 @@ A collection of completed submissions and project-based learning activities base
 ### 🔰 Basic to Intermediate:
 
 1. [`nodejs-basic`](./nodejs-basic)
+2. [`nodejs-web-server](./nodejs-web-server/)
