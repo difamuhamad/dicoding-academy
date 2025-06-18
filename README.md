@@ -35,3 +35,5 @@ A collection of completed submissions and project-based learning activities base
 
 1. [`nodejs-basic`](./nodejs-basic)
 2. [`nodejs-web-server](./nodejs-web-server/)
+3. [`notes-app-backend](./notes-app-backend/)
+4. [`nodejs-consume-data](./nodejs-consume-data/)
