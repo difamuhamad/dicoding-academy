@@ -9,7 +9,7 @@ A collection of completed submissions and project-based learning activities base
 ### 🔰 Basic to Intermediate:
 
 1. [`final-assesment-web`](./final-assesment-web)
-2. [`latihan-javascript`](./latihan-javascript)
+2. [`final-assessment-javascript`](./final-assessment-javascript)
 3. [`project-todoapps`](./project-todoapps)
 4. [`image-figure-starter-project`](./image-figure-starter-project)
 5. [`club-finder-app-web-component`](./club-finder-app-web-component)
