@@ -37,3 +37,4 @@ A collection of completed submissions and project-based learning activities base
 2. [`nodejs-web-server](./nodejs-web-server/)
 3. [`notes-app-backend](./notes-app-backend/)
 4. [`nodejs-consume-data](./nodejs-consume-data/)
+5. [`bookshelf-api`](./bookshelf-api/)
