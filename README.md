@@ -27,6 +27,10 @@ A collection of completed submissions and project-based learning activities base
 8. [`custom-map-starter-project`](./custom-map-starter-project)
 9. [`citycareapp-deployment-final`](./citycareapp-deployment-final)
 
+### 🔰 Extra class:
+
+1. [`first-sass-web-project`](./first-sass-web-project)
+
 ---
 
 ## 🖥️ Back-End Developer Path
