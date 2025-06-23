@@ -30,6 +30,7 @@ A collection of completed submissions and project-based learning activities base
 ### 🔰 Extra class:
 
 1. [`first-sass-web-project`](./first-sass-web-project)
+2. [`sass-portfolio-page`](./sass-portfolio-page)
 
 ---
 
