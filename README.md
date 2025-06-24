@@ -31,6 +31,7 @@ A collection of completed submissions and project-based learning activities base
 
 1. [`first-sass-web-project`](./first-sass-web-project)
 2. [`sass-portfolio-page`](./sass-portfolio-page)
+3. [`lit-web-component`](./lit-web-component/)
 
 ---
 
