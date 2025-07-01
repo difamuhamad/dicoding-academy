@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="fi" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="scdc51493505978b7">
+  <source>Story App. All rights reserved.</source>
+  <target>Kaikki oikeudet pidätetään.</target>
+</trans-unit>
+<trans-unit id="s387edacd3c076931">
+  <source>Change Photo</source>
+  <target>Vaihda kuva</target>
+</trans-unit>
+<trans-unit id="s17fc59d42b9bc362">
+  <source>Account Information</source>
+  <target>Tilitiedot</target>
+</trans-unit>
+<trans-unit id="s392f74e3914541cb">
+  <source>User ID</source>
+  <target>Käyttäjätunnus</target>
+</trans-unit>
+<trans-unit id="se81e3e70a1a9cc4f">
+  <source>Full Name</source>
+  <target>Koko nimi</target>
+</trans-unit>
+<trans-unit id="s8847d64291996459">
+  <source>Member since</source>
+  <target>Jäsen alkaen</target>
+</trans-unit>
+<trans-unit id="s8641b6c3688a0cec">
+  <source>Edit Profile</source>
+  <target>Muokkaa profiilia</target>
+</trans-unit>
+<trans-unit id="s8fa032cdafb3c9b0">
+  <source>Sign Out</source>
+  <target>Kirjaudu ulos</target>
+</trans-unit>
+<trans-unit id="s429b7ecde854fca5">
+  <source>Failed to load stories. Please try again later.</source>
+  <target>Tarinoiden lataaminen epäonnistui. Yritä myöhemmin uudelleen.</target>
+</trans-unit>
+<trans-unit id="s3e0aa65b207ded23">
+  <source>Story is empty</source>
+  <target>Tarina on tyhjä</target>
+</trans-unit>
+<trans-unit id="s603acf926e094d42">
+  <source>Image Preview</source>
+ <target>Kuvan esikatselu</target>
+</trans-unit>
+<trans-unit id="s301ffc08c967a5ee">
+  <source>Upload minimum 1 image</source>
+  <target>Lataa vähintään yksi kuva</target>
+</trans-unit>
+<trans-unit id="s63d894b1ddb06289">
+  <source>Description</source>
+  <target>Kuvaus</target>
+</trans-unit>
+<trans-unit id="sa06ec0556a52eed8">
+  <source>Description cannot be empty</source>
+  <target>Kuvaus ei voi olla tyhjä</target>
+</trans-unit>
+<trans-unit id="sb3d4f79d9d8b71e5">
+  <source>Submit</source>
+  <target>Lähetä</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

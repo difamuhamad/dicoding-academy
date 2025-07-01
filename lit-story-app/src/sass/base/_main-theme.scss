@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as vars;
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: vars.$background;
+  color: vars.$foreground;
+  font-family: vars.$font-sans;
+  line-height: 1.5;
+
+  // Optional: Subtle grid pattern
+  background-image: vars.$bg-pattern;
+}
+
+.main-content {
+  padding: vars.$spacing-lg 0;
+  min-height: calc(100vh - #{vars.$header-height} - #{vars.$footer-height});
+
+  // Gradient fade-in effect
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    background: linear-gradient(to bottom, vars.$background, transparent);
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  $container-padding: 1rem;
+
+  .main-content {
+    padding: vars.$spacing-md 0;
+  }
+}

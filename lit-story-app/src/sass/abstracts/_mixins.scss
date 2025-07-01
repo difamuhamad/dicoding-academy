@@ -1,0 +1,45 @@
+@use 'variables' as vars;
+
+// For flex
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Navbar sticky base
+@mixin sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: vars.$background;
+  border-bottom: 1px solid vars.$border;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+// Navigation Link
+@mixin nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: vars.$spacing-sm vars.$spacing-md;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: vars.$primary;
+  text-decoration: none;
+  border-radius: vars.$radius;
+  transition: all 0.15s ease;
+
+  &:hover {
+    color: vars.$background;
+    background-color: vars.$muted;
+  }
+}
+
+// Responsive breakpoint
+@mixin mobile-only {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

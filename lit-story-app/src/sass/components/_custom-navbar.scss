@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mx;
+
+.navbar {
+  @include mx.sticky-navbar;
+}
+
+.navbar-container {
+  @include mx.flex-between;
+  height: 3.5rem;
+  padding: 0 vars.$spacing-md;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: vars.$foreground;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$primary;
+  }
+}
+
+.navbar-logo {
+  height: 1.75rem;
+  width: auto;
+  margin-right: vars.$spacing-sm;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+}
+
+.nav-link {
+  @include mx.nav-link;
+
+  &.active {
+    color: vars.$primary;
+  }
+}
+
+.navbar-mobile-button {
+  display: none;
+  background: none;
+  border: none;
+  color: vars.$foreground;
+  cursor: pointer;
+  padding: vars.$spacing-sm;
+  border-radius: vars.$radius;
+
+  &:hover {
+    background-color: vars.$secondary;
+  }
+
+  @include mx.mobile-only {
+    display: flex;
+  }
+}
+
+.navbar-mobile-menu {
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  background-color: vars.$background;
+  border-bottom: 1px solid vars.$border;
+  padding: vars.$spacing-md;
+  display: none;
+  flex-direction: column;
+  gap: vars.$spacing-sm;
+
+  &.open {
+    display: flex;
+  }
+}
+
+@include mx.mobile-only {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-mobile-menu.open + .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.navbar-link {
+  locale-picker {
+    position: relative;
+    display: inline-block;
+    margin-left: vars.$spacing-sm;
+
+    select {
+      background-color: vars.$background;
+      color: vars.$foreground;
+      border: 1px solid vars.$border;
+      border-radius: vars.$radius;
+      padding: vars.$spacing-xs vars.$spacing-lg vars.$spacing-xs
+        vars.$spacing-md;
+      font-size: 0.875rem;
+      font-family: vars.$font-sans;
+      cursor: pointer;
+      appearance: none;
+      transition: all 0.2s ease;
+      min-width: 120px;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{str-replace(#{vars.$foreground}, '#', '%23')}'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right vars.$spacing-sm center;
+      background-size: 1rem;
+
+      &:hover {
+        border-color: vars.$primary;
+        background-color: rgba(vars.$primary, 0.1);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: vars.$primary;
+        box-shadow: 0 0 0 2px vars.$ring;
+      }
+
+      option {
+        background-color: vars.$background;
+        color: vars.$foreground;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body>
+    <header>
+      <navbar-component brandName="Story App"></navbar-component>
+    </header>
+
+    <main class="container my-5">
+      <!-- Alert -->
+      <div id="alertContainer" class="row justify-content-center mb-4">
+        <div class="col-md-8 col-lg-6"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <upload-form></upload-form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>

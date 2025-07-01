@@ -1,0 +1,193 @@
+@use '../abstracts/variables' as vars;
+
+#storyContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: vars.$spacing-md;
+  width: 100%;
+  margin: 0;
+  padding: vars.$spacing-md 0;
+
+  // Responsive adjustments
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+
+  > .col-md-4 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .card {
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  background-color: vars.$background;
+  border: 1px solid vars.$border;
+  border-radius: vars.$radius;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: vars.$foreground;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: vars.$shadow-md;
+    border-color: vars.$primary;
+  }
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  padding: vars.$spacing-md vars.$spacing-md 0;
+  border-bottom: 1px solid vars.$border;
+  background-color: vars.$secondary;
+
+  &:first-child {
+    border-radius: calc(#{vars.$radius} - 1px) calc(#{vars.$radius} - 1px) 0 0;
+  }
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: vars.$spacing-sm;
+  color: vars.$foreground;
+}
+
+.card-body {
+  padding: vars.$spacing-md;
+  flex: 1 1 auto;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-footer {
+  padding: vars.$spacing-sm vars.$spacing-md;
+  border-top: 1px solid vars.$border;
+  background-color: transparent;
+
+  .card-subtitle {
+    font-size: 0.85rem;
+    color: vars.$muted-foreground;
+  }
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  &-top {
+    border-top-left-radius: calc(#{vars.$radius} - 1px);
+    border-top-right-radius: calc(#{vars.$radius} - 1px);
+  }
+
+  &-bottom {
+    border-bottom-left-radius: calc(#{vars.$radius} - 1px);
+    border-bottom-right-radius: calc(#{vars.$radius} - 1px);
+  }
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: vars.$spacing-md;
+  background: linear-gradient(
+    to top,
+    hsla(222, 47%, 11%, 0.9) 0%,
+    hsla(222, 47%, 11%, 0.7) 50%,
+    hsla(222, 47%, 11%, 0.5) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+// Card variants
+.card-primary {
+  border-color: vars.$primary;
+
+  .card-header {
+    background-color: rgba(vars.$primary, 0.1);
+    border-color: vars.$primary;
+  }
+}
+
+.card-destructive {
+  border-color: vars.$destructive;
+
+  .card-header {
+    background-color: rgba(vars.$destructive, 0.1);
+    border-color: vars.$destructive;
+  }
+}
+
+.card-accent {
+  border-color: vars.$accent;
+
+  .card-header {
+    background-color: rgba(vars.$accent, 0.1);
+    border-color: vars.$accent;
+  }
+}
+
+// Card sizes
+.card-sm {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: vars.$spacing-sm;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+.card-lg {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: vars.$spacing-lg;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+// Interactive card
+.card-interactive {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: vars.$shadow-lg;
+    border-color: vars.$primary;
+  }
+
+  &:active {
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as vars;
+
+.spinner-component {
+  display: inline-block;
+  text-align: center;
+
+  .spinner-border {
+    width: vars.$spacing-lg;
+    height: vars.$spacing-lg;
+    border-width: 0.2em;
+    border-color: vars.$primary;
+    border-right-color: transparent;
+    animation: spinner-rotate 0.75s linear infinite;
+    vertical-align: middle;
+
+    // Variant colors
+    &--primary {
+      border-color: vars.$primary;
+      border-right-color: transparent;
+    }
+
+    &--secondary {
+      border-color: vars.$secondary;
+      border-right-color: transparent;
+    }
+
+    &--accent {
+      border-color: vars.$accent;
+      border-right-color: transparent;
+    }
+
+    &--destructive {
+      border-color: vars.$destructive;
+      border-right-color: transparent;
+    }
+
+    // Sizes
+    &--sm {
+      width: vars.$spacing-md;
+      height: vars.$spacing-md;
+      border-width: 0.15em;
+    }
+
+    &--lg {
+      width: vars.$spacing-xl;
+      height: vars.$spacing-xl;
+      border-width: 0.25em;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+@keyframes spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

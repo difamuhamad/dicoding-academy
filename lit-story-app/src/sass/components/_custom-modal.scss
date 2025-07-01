@@ -1,0 +1,121 @@
+// _modal.scss
+@use '../abstracts/variables' as vars;
+
+.modal {
+  --bs-modal-color: #{vars.$foreground};
+  --bs-modal-bg: #{vars.$background};
+  --bs-modal-border-color: #{vars.$border};
+  --bs-modal-box-shadow: #{vars.$shadow-lg};
+  --bs-modal-header-border-color: #{vars.$border};
+  --bs-modal-footer-border-color: #{vars.$border};
+  --bs-modal-header-padding: #{vars.$spacing-md} #{vars.$spacing-lg};
+
+  .modal-content {
+    border-radius: vars.$radius;
+    border: 1px solid vars.$border;
+    box-shadow: vars.$shadow-lg;
+    background-clip: padding-box;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid vars.$border;
+    padding: var(--bs-modal-header-padding);
+
+    .btn-close {
+      filter: invert(1) brightness(0.8);
+      transition: filter 0.2s ease;
+
+      &:hover {
+        filter: invert(1) brightness(1);
+      }
+    }
+  }
+
+  .modal-title {
+    color: vars.$foreground;
+    font-weight: 600;
+  }
+
+  .modal-body {
+    padding: vars.$spacing-lg;
+    color: vars.$muted;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal-footer {
+    border-top: 1px solid vars.$border;
+    padding: vars.$spacing-md vars.$spacing-lg;
+    background-color: rgba(vars.$secondary, 0.3);
+
+    .btn {
+      min-width: 6rem;
+      padding: vars.$spacing-sm vars.$spacing-md;
+
+      + .btn {
+        margin-left: vars.$spacing-sm;
+      }
+    }
+  }
+
+  // Custom modal sizes
+  &.modal-sm {
+    max-width: 400px;
+  }
+
+  &.modal-lg {
+    max-width: 800px;
+  }
+
+  // Animation
+  &.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease;
+  }
+}
+
+// Backdrop styling
+.modal-backdrop {
+  --bs-backdrop-bg: #{rgba(vars.$background, 0.85)};
+  --bs-backdrop-opacity: 1;
+
+  &.show {
+    backdrop-filter: blur(4px);
+  }
+}
+
+// Dark mode specific adjustments
+@media (prefers-color-scheme: dark) {
+  .modal {
+    --bs-modal-color: #{vars.$foreground};
+    --bs-modal-bg: #{darken(vars.$background, 2%)};
+
+    .modal-footer {
+      background-color: rgba(vars.$secondary, 0.5);
+    }
+  }
+}
+
+// Custom modal variants
+.modal-primary {
+  .modal-header {
+    background-color: rgba(vars.$primary, 0.1);
+    border-bottom-color: rgba(vars.$primary, 0.3);
+  }
+
+  .modal-footer {
+    border-top-color: rgba(vars.$primary, 0.3);
+  }
+}
+
+.modal-destructive {
+  .modal-header {
+    background-color: rgba(vars.$destructive, 0.1);
+    border-bottom-color: rgba(vars.$destructive, 0.3);
+  }
+
+  .modal-footer {
+    border-top-color: rgba(vars.$destructive, 0.3);
+  }
+}

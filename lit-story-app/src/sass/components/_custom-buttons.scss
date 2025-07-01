@@ -1,0 +1,180 @@
+@use '../abstracts/variables' as vars;
+
+.btn {
+  $btn-hover-bg: darken(vars.$secondary, 5%);
+  $btn-hover-border: darken(vars.$secondary, 10%);
+  $btn-active-bg: darken(vars.$secondary, 10%);
+  $btn-active-border: darken(vars.$secondary, 15%);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: vars.$radius;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  height: 2.25rem;
+  padding: 0.375rem 1rem;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+
+  &:focus-visible {
+    box-shadow: vars.$ring;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background-color: $btn-hover-bg;
+    border-color: $btn-hover-border;
+  }
+
+  &:active {
+    background-color: $btn-active-bg;
+    border-color: $btn-active-border;
+  }
+
+  .btn-icon {
+    margin-right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+// Button variants
+.btn-primary {
+  background-color: vars.$primary;
+  border-color: vars.$primary;
+  color: vars.$primary-foreground;
+
+  &:hover {
+    background-color: vars.$primary-hover;
+    border-color: vars.$primary-hover;
+  }
+
+  &:active {
+    background-color: darken(vars.$primary-hover, 5%);
+    border-color: darken(vars.$primary-hover, 5%);
+  }
+}
+
+.btn-secondary {
+  background-color: vars.$secondary;
+  border-color: darken(vars.$secondary, 5%);
+  color: vars.$secondary-foreground;
+
+  &:hover {
+    background-color: vars.$secondary-hover;
+    border-color: darken(vars.$secondary-hover, 5%);
+  }
+
+  &:active {
+    background-color: darken(vars.$secondary-hover, 5%);
+    border-color: darken(vars.$secondary-hover, 10%);
+  }
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: vars.$primary;
+  color: vars.$primary;
+
+  &:hover {
+    background-color: rgba(vars.$primary, 0.1);
+    border-color: vars.$primary;
+  }
+
+  &:active {
+    background-color: rgba(vars.$primary, 0.2);
+    border-color: vars.$primary;
+  }
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border-color: vars.$border;
+  color: vars.$foreground;
+
+  &:hover {
+    background-color: vars.$secondary;
+    border-color: darken(vars.$border, 10%);
+  }
+
+  &:active {
+    background-color: darken(vars.$secondary, 5%);
+    border-color: darken(vars.$border, 15%);
+  }
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: vars.$foreground;
+
+  &:hover {
+    background-color: vars.$secondary;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: darken(vars.$secondary, 5%);
+    border-color: transparent;
+  }
+}
+
+.btn-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: vars.$primary;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+// Button sizes
+.btn-sm {
+  height: 1.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  height: 2.75rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+// Button with icon
+.btn-icon-only {
+  width: 2.25rem;
+  padding: 0;
+
+  &.btn-sm {
+    width: 1.75rem;
+  }
+
+  &.btn-lg {
+    width: 2.75rem;
+  }
+}
+
+// Disabled state
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
