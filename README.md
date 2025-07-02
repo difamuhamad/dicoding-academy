@@ -33,6 +33,7 @@ A collection of completed submissions and project-based learning activities base
 2. [`sass-portfolio-page`](./sass-portfolio-page)
 3. [`lit-web-component`](./lit-web-component/)
 4. [`lit-story-app`](./lit-story-app/)
+5. [`axios-starter`](./axios-starter/)
 
 ---
 
