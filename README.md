@@ -34,6 +34,7 @@ A collection of completed submissions and project-based learning activities base
 3. [`lit-web-component`](./lit-web-component/)
 4. [`lit-story-app`](./lit-story-app/)
 5. [`axios-starter`](./axios-starter/)
+6. [`money-tracker-app`](./money-tracker-app/)
 
 ---
 
