@@ -35,6 +35,7 @@ A collection of completed submissions and project-based learning activities base
 4. [`lit-story-app`](./lit-story-app/)
 5. [`axios-starter`](./axios-starter/)
 6. [`money-tracker-app`](./money-tracker-app/)
+7. [`money-tracker-app-firebase`](./money-tracker-app-firebase/)
 
 ---
 
